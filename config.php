@@ -5,3 +5,4 @@ return ['host' => 'localhost',
         'password' => '',
         'database' => 'movierental'
 ];
+?>
