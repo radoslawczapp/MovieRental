@@ -1,5 +1,6 @@
 <?php
 
-include 'database.php';
+    include 'database.php';
+    require_once 'index.html';
 
  ?>
