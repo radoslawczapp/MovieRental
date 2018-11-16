@@ -9,27 +9,27 @@
 
 	<meta name="description" content="Movie Rental" />
 	<meta name="keywords" content="movie, rental, rent, movie, cinema, reviews" />
-	<link rel="stylesheet" href="css/signin.css">
+	<!-- <link rel="stylesheet" href="css/signin.css"> -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 
 <body>
-	<form action="#" name="signin">
 		<div class="login-box">
 			<h1>Login</h1>
+			<form action="login.php" name="signin" method="post">
 			<div class="textbox">
 				<i class="fas fa-user"></i>
-				<input type="text" placeholder="Username" onfocus="this.placeholder=''" onblur="this.placeholder='Username'">
+				<input type="text" placeholder="Username" onfocus="this.placeholder=''" onblur="this.placeholder='Username'" name="username">
 			</div>
 			<div class="textbox">
 				<i class="fas fa-lock"></i>
-				<input type="password" placeholder="Password" onfocus="this.placeholder=''" onblur="this.placeholder='Password'">
+				<input type="password" placeholder="Password" onfocus="this.placeholder=''" onblur="this.placeholder='Password'" name="password">
 			</div>
-			<input type="button" class="btn" value="Sign in"><br>
+			<input type="submit" class="btn" value="Sign in"><br>
+			</form>
 			<a href="#">Not a member? Sign up</a>
 		</div>
-	</form>
 </body>
 
 </html>
