@@ -119,7 +119,7 @@ h1, h2, h3, h4, h5, h6 {
     #top_movies header .view_more, #top_shows header .view_more {
       float: right;
       font-size: .8em;
-      margin: .75em 3.5% 0; }
+      margin: .75em 3.5% 0 0; }
 
 #top_movies {
   border-bottom: 1px solid #d4d4d4; }
@@ -149,6 +149,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #2a2a2e; }
   #newsletter .newsletter_inner {
     width: 600px;
+    max-width: 90%;
     margin: 0 auto; }
   #newsletter h2 {
     font-size: 1.75em;
@@ -204,10 +205,84 @@ h1, h2, h3, h4, h5, h6 {
 @media only screen and (max-width: 768px) {
   #main_nav {
     display: none; }
+  #main_nav.active {
+    display: block;
+    width: 100%; }
+    #main_nav.active a {
+      display: block;
+      padding: 1em 0;
+      border-bottom: 1px solid #e9e9e9; }
+      #main_nav.active a:last-child {
+        border-bottom: none; }
   .menu {
     display: block;
     float: right; }
     .menu i {
       font-size: 1.5em;
       color: #252529;
-      padding-top: .6em; } }
+      padding-top: .6em; }
+  #banner {
+    padding: 3.5rem 0; }
+    #banner #poster {
+      width: 250px; }
+      #banner #poster .play_button {
+        width: 60px;
+        margin: -30px 0 0 -30px; }
+    #banner #content {
+      margin-left: 50px; }
+      #banner #content .title {
+        font-size: 1.5em; }
+      #banner #content .ratings i {
+        font-size: 1em; }
+      #banner #content .description {
+        font-size: .9em; }
+      #banner #content .info {
+        font-size: .7em;
+        margin-top: 2em; }
+        #banner #content .info span {
+          margin: 0 .25em; }
+  #top_movies, #top_shows {
+    padding: 3em 0; }
+    #top_movies header, #top_shows header {
+      padding: 0 0 1.5em 1.25%; }
+      #top_movies header h2, #top_shows header h2 {
+        font-size: 1.5em; }
+      #top_movies header .view_more, #top_shows header .view_more {
+        margin: .75em 2.25% 0 0; }
+  .row .post {
+    width: 30.6%;
+    margin: 0 1.25% 2em 1.25%; }
+    .row .post .title {
+      font-size: 1em;
+      margin: .5em 0 0 0; }
+    .row .post .post_info {
+      font-size: .65em; } }
+
+@media only screen and (max-width: 575px) {
+  #banner #banner_content_wrapper {
+    display: block; }
+    #banner #banner_content_wrapper #poster {
+      width: 250px;
+      float: none;
+      display: block;
+      margin: 0 auto; }
+    #banner #banner_content_wrapper #content {
+      width: 100%;
+      margin: 1em auto 0 auto; }
+  #top_movies header, #top_shows header {
+    margin-bottom: 2em; }
+  .row .post {
+    width: 250px;
+    margin: 0 auto 2em auto;
+    float: none; }
+  #newsletter {
+    padding: 3em 0; }
+    #newsletter h2 {
+      font-size: 1.35em; }
+    #newsletter .sign_up_form {
+      margin-top: 2em; }
+      #newsletter .sign_up_form input[type="text"], #newsletter .sign_up_form input[type="email"] {
+        width: 90%;
+        margin: 0 0 1em 0; }
+      #newsletter .sign_up_form .button {
+        margin-top: 2em; } }
