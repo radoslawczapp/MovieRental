@@ -1,16 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin-ext" rel="stylesheet" type="text/css">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
     <title>MovieRental</title>
 </head>
-<body>
 
+<body>
+    <header id="top_header" class="clearfix">
+        <div class="wrapper">
+            <h1 class="logo">Movie<span>&amp;</span>Rental</h1>
+
+            <a href="#" class="menu"><i class="fa fa-bars"></i></a>
+            <nav id="main_nav">
+                <a href="#">Movies</a>
+                <a href="#">TV Shows</a>
+                <a href="#">Celebs &amp; Photos</a>
+                <a href="#">Login/Register</a>
+            </nav>
+        </div>
+    </header>
+    <section id="banner" class="clearfix">
+        <div id="banner_content_wrapper">
+            <div id="poster">
+                <img src="images/movies/deadpool.jpg" alt="Deadpool Movie Poster" class="featured_image">
+                <img src="images/play_button.png" alt="Play Trailer" class="play_button">
+            </div>
+            <div id="content">
+                <h2 class="title">Deadpool</h2>
+                <div class="ratings">
+                    <i class="fa fa-star"></i>
+                    <i class="inactive" id="rate">8,0</i><i class="inactive">/10</i>
+                </div>
+                <p class="description">A wisecracking mercenary gets experimented on and becomes immortal but ugly, and sets out to track the man who ruined his looks.</p>
+                <p class="info">R <span>|</span> 108 min <span>|</span> Action <span>|</span> 12 February 2016</p>
+            </div>
+        </div>
+    </section>
+    <section id="top_movies" class="clearfix">
+        <div class="wrapper">
+            <header class="clearfix">
+                <h2>Popular Movies</h2>
+                <p class="view_more">View All Movies</p>
+            </header>
+
+            <div class="row">
+                <div class="post">
+                    <img src="images/movies/the_martian.jpg" alt="The Martian">
+                    <h3 class="title">The Martian</h3>
+                    <div class="post_info">PG13 | 109 min</div>
+                </div>
+
+                <div class="post">
+                    <img src="images/movies/the_wolf_of_wall_street.jpg" alt="The Wolf of Wall Street">
+                    <h3 class="title">The Wolf of Wall Street</h3>
+                    <div class="post_info">PG13 | 109 min</div>
+                </div>
+
+                <div class="post">
+                    <img src="images/movies/star_wars_the_last_jedi.jpg" alt="Star Wars: The Last Jedi">
+                    <h3 class="title">Star Wars: The Last Jedi</h3>
+                    <div class="post_info">PG13 | 109 min</div>
+                </div>
+
+                <div class="post">
+                    <img src="images/movies/interstellar.jpg" alt="Interstellar">
+                    <h3 class="title">Interstellar</h3>
+                    <div class="post_info">PG13 | 109 min</div>
+                </div>
+
+                <div class="post">
+                    <img src="images/movies/bohemian_rhapsody.jpg" alt="Bohemian Rhapsody">
+                    <h3 class="title">Bohemian Rhapsody</h3>
+                    <div class="post_info">PG13 | 109 min</div>
+                </div>
+
+                <div class="post">
+                    <img src="images/movies/avengers_infinity_war.jpg" alt="Avengers: Infinity War">
+                    <h3 class="title">Avengers: Infinity War</h3>
+                    <div class="post_info">PG13 | 109 min</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="top_shows" class="clearfix">
+        <div class="wrapper">
+            <header class="clearfix">
+                <h2>Popular TV Shows</h2>
+                <p class="view_more">View All TV Shows</p>
+            </header>
+
+            <div class="row">
+                <div class="post">
+                    <img src="images/tv_shows/game_of_thrones.jpg" alt="Game of Thrones">
+                    <h3 class="title">Game of Thrones</h3>
+                    <div class="post_info">PG13 | 109 min</div>
+                </div>
+
+                <div class="post">
+                    <img src="images/tv_shows/dr_house.jpg" alt="Dr.House">
+                    <h3 class="title">Dr.House</h3>
+                    <div class="post_info">PG13 | 109 min</div>
+                </div>
+
+                <div class="post">
+                    <img src="images/tv_shows/breaking_bad.jpg" alt="Breaking Bad">
+                    <h3 class="title">Breaking Bad</h3>
+                    <div class="post_info">PG13 | 109 min</div>
+                </div>
+
+                <div class="post">
+                    <img src="images/tv_shows/boardwalk_empire.jpg" alt="Boardwalk Empire">
+                    <h3 class="title">Boardwalk Empire</h3>
+                    <div class="post_info">PG13 | 109 min</div>
+                </div>
+
+                <div class="post">
+                    <img src="images/tv_shows/house_of_cards.jpg" alt="House of Cards">
+                    <h3 class="title">House of Cards</h3>
+                    <div class="post_info">PG13 | 109 min</div>
+                </div>
+
+                <div class="post">
+                    <img src="images/tv_shows/mr_robot.jpg" alt="Mr. Robot">
+                    <h3 class="title">Mr. Robot</h3>
+                    <div class="post_info">PG13 | 109 min</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="newsletter">
+        <div class="newsletter_inner">
+            <h2>Get the best Movies &amp; TV Shows information and ratings straight in your inbox each week.</h2>
+            <div class="sign_up_form">
+                <input type="text" placeholder="First Name">
+                <input type="email" placeholder="Email Address">
+                <button class="button">Subscribe</button>
+            </div>
+        </div>
+    </section>
+    <footer id="main_footer">
+        <p class="logo">Movie<span>&amp;</span>Rental</p>
+        <p class="copyright">&copy;2019 MovieRental All Rights Reserved</p>
+        <div class="links">
+            <a href="#"> Terms Of Service</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </footer>
 </body>
+
 </html>
