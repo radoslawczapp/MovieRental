@@ -9,6 +9,12 @@ $white: #ffffff;
 
 html, body {
     font-family: 'Open Sans', sans-serif;
+     -webkit-touch-callout: none;
+     -webkit-user-select: none;
+     -khtml-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
 }
 
 .clearfix:before, .clearfix:after{
@@ -32,10 +38,11 @@ h1, h2, h3, h4, h5, h6{
 
 #top_header{
     padding: 1.5rem 0;
+    background: #d4d4d4;
     .logo{
         float: left;
         text-transform: uppercase;
-        font-size: 1.15rem;
+        font-size: 1.5rem;
         font-weight: 700;
         a{
             text-decoration: none;
@@ -50,10 +57,20 @@ h1, h2, h3, h4, h5, h6{
         float: right;
         font-size: .9rem;
         padding-top: 1em;
+        // a{
+        //     color: $secondary;
+        //     text-decoration: none;
+        //     margin-left: 1em;
+        // }
+        display: inline;
         a{
             color: $secondary;
+            font-size: 1.25em;
             text-decoration: none;
-            margin-left: 1em;
+            margin: 0 .5em;
+            &:hover{
+                color: $highlight;
+            }
         }
     }
 }
@@ -63,9 +80,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 #banner{
-    background: url(../images/banner_background.png);
     background-repeat: no-repeat;
-    background-size: cover;
     width: 100%;
     padding: 6.5rem 0;
     #banner_content_wrapper{
@@ -400,4 +415,9 @@ h1, h2, h3, h4, h5, h6{
             }
         }
     }
+}
+
+#wrap{
+    max-width: 1440px;
+    margin: auto;
 }
