@@ -1,3 +1,8 @@
+<?php
+$banner = isset($_GET['title']) ? $_GET['title'] : 'null';
+echo $banner;
+ ?>
+
 <section id="banner" class="clearfix" style="background: url(images/posters/deadpool_poster.png);background-size: cover;">
     <div id="banner_content_wrapper">
             <video id="video" controls>

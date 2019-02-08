@@ -1,6 +1,6 @@
 $main: #252529;
-$secondary: #8b8b9f;
-$highlight: #73e298;
+$secondary: #24313c;
+$highlight: #1ab188;
 $white: #ffffff;
 
 * {
@@ -93,8 +93,8 @@ h1, h2, h3, h4, h5, h6{
     }
     #video{
         display: none;
-        // -webkit-
-        // -moz-
+        -webkit-box-shadow: 0px 0px 50px rgba(0,0,0,1);
+        -moz-box-shadow: 0px 0px 50px rgba(0,0,0,1);
         box-shadow: 0px 0px 50px rgba(0,0,0,1);
     }
     #poster{
@@ -108,7 +108,15 @@ h1, h2, h3, h4, h5, h6{
             -webkit-box-shadow: 0px 0px 76px 0px rgba(0, 0, 0, 0.47);
             -moz-box-shadow: 0px 0px 76px 0px rgba(0, 0, 0, 0.47);
             box-shadow: 0px 0px 76px 0px rgba(0, 0, 0, 0.47);
+            transition: .4s;
         }
+        // .featured_image:hover{
+        //     -webkit-box-shadow: 0px 0px 76px 0px rgba(255, 255, 255, 0.47);
+        //     -moz-box-shadow: 0px 0px 76px 0px rgba(255, 255, 255, 0.47);
+        //     box-shadow: 0px 0px 76px 0px rgba(255, 255, 255, 0.47);
+        //     transition: .4s;
+        //     transform: scale(1.25);
+        // }
         .play_button{
             position: absolute;
             width: 80px;

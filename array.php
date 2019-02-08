@@ -66,6 +66,28 @@ $table = array(
         'rating' => 8.5,
         'date' => '2018-04-26',
         'video' => 'avengers_infinity_war.mp4'
+    ),
+    7 => array(
+        'title' => 'Robin Hood',
+        'cover' => 'cover_robin_hood.jpg',
+        'poster' => 'poster_robin_hood.jpg',
+        'age_restriction' => 'PG13',
+        'duration' => 116,
+        'category' => 'Adventure',
+        'rating' => 5.3,
+        'date' => '2018-11-30',
+        'video' => 'robin_hood.mp4'
+    ),
+    8 => array(
+        'title' => 'First Man',
+        'cover' => 'cover_first_man.jpg',
+        'poster' => '.jpg',
+        'age_restriction' => 'PG13',
+        'duration' => 141,
+        'category' => 'Biography',
+        'rating' => 7.4,
+        'date' => '2018-10-19',
+        'video' => '.mp4'
     )
 );
 

@@ -39,19 +39,19 @@ h1, h2, h3, h4, h5, h6 {
       color: inherit; }
     #top_header .logo span {
       font-weight: 300;
-      color: #73e298; }
+      color: #1ab188; }
   #top_header #main_nav {
     float: right;
     font-size: .9rem;
     padding-top: 1em;
     display: inline; }
     #top_header #main_nav a {
-      color: #8b8b9f;
+      color: #24313c;
       font-size: 1.25em;
       text-decoration: none;
       margin: 0 .5em; }
       #top_header #main_nav a:hover {
-        color: #73e298; }
+        color: #1ab188; }
 
 .menu {
   display: none; }
@@ -76,6 +76,7 @@ h1, h2, h3, h4, h5, h6 {
   #banner #video {
     display: none;
     -webkit-box-shadow: 0px 0px 50px black;
+    -moz-box-shadow: 0px 0px 50px black;
     box-shadow: 0px 0px 50px black; }
   #banner #poster {
     width: 275px;
@@ -87,7 +88,10 @@ h1, h2, h3, h4, h5, h6 {
       border-radius: .5em;
       -webkit-box-shadow: 0px 0px 76px 0px rgba(0, 0, 0, 0.47);
       -moz-box-shadow: 0px 0px 76px 0px rgba(0, 0, 0, 0.47);
-      box-shadow: 0px 0px 76px 0px rgba(0, 0, 0, 0.47); }
+      box-shadow: 0px 0px 76px 0px rgba(0, 0, 0, 0.47);
+      -webkit-transition: .4s;
+      -o-transition: .4s;
+      transition: .4s; }
     #banner #poster .play_button {
       position: absolute;
       width: 80px;
@@ -118,7 +122,7 @@ h1, h2, h3, h4, h5, h6 {
       display: inline;
       margin-left: 1em; }
       #banner #content .ratings i {
-        color: #73e298;
+        color: #1ab188;
         font-size: 1.35em;
         margin: 0 .15em; }
       #banner #content .ratings .inactive {
@@ -168,7 +172,7 @@ h1, h2, h3, h4, h5, h6 {
       color: #252529; }
     .row .post .post_info {
       font-size: .75em;
-      color: #8b8b9f;
+      color: #24313c;
       margin: 0.5em 0; }
 
 #newsletter {
@@ -200,7 +204,7 @@ h1, h2, h3, h4, h5, h6 {
       outline: none;
       padding: 1em 4.5em;
       border-radius: 2em;
-      background: #73e298;
+      background: #1ab188;
       color: #ffffff;
       font-weight: 700;
       font-size: .9em;
@@ -215,20 +219,20 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700; }
     #main_footer .logo span {
       font-weight: 300;
-      color: #73e298; }
+      color: #1ab188; }
   #main_footer .copyright {
-    color: #8b8b9f;
+    color: #24313c;
     font-size: .75em;
     margin: 0; }
   #main_footer .links {
     display: inline; }
     #main_footer .links a {
-      color: #8b8b9f;
+      color: #24313c;
       font-size: .75em;
       text-decoration: none;
       margin: 0 .5em; }
       #main_footer .links a:hover {
-        color: #73e298; }
+        color: #1ab188; }
 
 @media only screen and (max-width: 768px) {
   #main_nav {
