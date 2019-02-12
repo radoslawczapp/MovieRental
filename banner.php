@@ -1,5 +1,5 @@
 <?php
-$banner = isset($_GET['title']) ? $_GET['title'] : 'null';
+$banner = isset($_GET['title']) ? $_GET['title'] : '';
 echo $banner;
  ?>
 

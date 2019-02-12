@@ -3,7 +3,7 @@
     <p class="copyright">&copy;2019 MovieRental All Rights Reserved</p>
     <div class="links">
         <a href="#"> Terms Of Service</a>
-        <a href="base.php?banner=policy">Privacy Policy</a>
+        <a href="index.php?banner=policy">Privacy Policy</a>
     </div>
 </footer>
 </body>

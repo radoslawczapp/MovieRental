@@ -2,16 +2,10 @@
 include_once('array.php');
 
 include_once('db.php');
-try{
-    $stmt = $conn->prepare("SELECT title, age_restriction, duration FROM info WHERE kind = 'movie'");
-    $stmt->execute();
-    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-} catch(PDOException $e){
-    echo "Error: " . $e->getMessage();
-}
-$conn = null;
-
+$stmt = $conn->prepare("SELECT title, age_restriction, duration FROM info WHERE kind = 'movie'");
+$stmt->execute();
+$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 <section id="top_movies" class="clearfix">
