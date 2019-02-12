@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #top_header {
   padding: 1.5rem 0;
-  background: #d4d4d4; }
+  background: #ffffff; }
   #top_header .logo {
     float: left;
     text-transform: uppercase;
@@ -142,6 +142,11 @@ h1, h2, h3, h4, h5, h6 {
 
 #top_movies, #top_shows {
   padding: 5em 0; }
+  #top_movies a, #top_shows a {
+    text-decoration: none;
+    color: #000000; }
+  #top_movies a:hover, #top_shows a:hover {
+    color: #1ab188; }
   #top_movies header, #top_shows header {
     padding: 0 0 1.5em 0; }
     #top_movies header h2, #top_movies header .view_more, #top_shows header h2, #top_shows header .view_more {
@@ -165,7 +170,21 @@ h1, h2, h3, h4, h5, h6 {
     .row .post img {
       width: 100%;
       max-width: 100%;
-      border-radius: .5em; }
+      border-radius: .5em;
+      -webkit-transition: .4s;
+      -o-transition: .4s;
+      transition: .4s; }
+    .row .post img:hover {
+      cursor: pointer;
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+      -webkit-transition: .4s;
+      -o-transition: .4s;
+      transition: .4s;
+      -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75); }
     .row .post .title {
       font-size: 1.25em;
       margin: 1em 0 0 0;
@@ -174,6 +193,10 @@ h1, h2, h3, h4, h5, h6 {
       font-size: .75em;
       color: #24313c;
       margin: 0.5em 0; }
+    .row .post h3:hover {
+      text-decoration: underline;
+      cursor: pointer;
+      color: #1ab188; }
 
 #newsletter {
   padding: 5em 0;
@@ -213,6 +236,9 @@ h1, h2, h3, h4, h5, h6 {
 #main_footer {
   padding: 2.5em 0;
   text-align: center; }
+  #main_footer a {
+    text-decoration: none;
+    color: #000000; }
   #main_footer .logo {
     text-transform: uppercase;
     font-size: 1.15rem;

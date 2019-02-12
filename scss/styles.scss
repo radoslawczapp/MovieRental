@@ -38,7 +38,8 @@ h1, h2, h3, h4, h5, h6{
 
 #top_header{
     padding: 1.5rem 0;
-    background: #d4d4d4;
+    // background: #d4d4d4;
+    background: $white;
     .logo{
         float: left;
         text-transform: uppercase;
@@ -174,6 +175,13 @@ h1, h2, h3, h4, h5, h6{
 
 #top_movies, #top_shows{
     padding:  5em 0;
+    a{
+        text-decoration: none;
+        color: #000000;
+    }
+    a:hover{
+        color: $highlight;
+    }
     header{
         padding: 0 0 1.5em 0;
         h2, .view_more{
@@ -204,6 +212,15 @@ h1, h2, h3, h4, h5, h6{
             width: 100%;
             max-width: 100%;
             border-radius: .5em;
+            transition: .4s;
+        }
+        img:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: .4s;
+            -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
         }
         .title{
             font-size: 1.25em;
@@ -214,6 +231,11 @@ h1, h2, h3, h4, h5, h6{
             font-size: .75em;
             color: $secondary;
             margin: 0.5em 0;
+        }
+        h3:hover{
+            text-decoration: underline;
+            cursor: pointer;
+            color: $highlight;
         }
     }
 }
@@ -262,6 +284,10 @@ h1, h2, h3, h4, h5, h6{
 #main_footer{
     padding: 2.5em 0;
     text-align: center;
+    a{
+        text-decoration: none;
+        color: #000000;
+    }
     .logo{
         text-transform: uppercase;
         font-size: 1.15rem;

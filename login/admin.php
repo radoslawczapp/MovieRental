@@ -40,33 +40,18 @@
             <th style="border-bottom: 2px solid #bcbcbc;">Delete</th>
             <?php
                 $result= $mysqli->query("SELECT * FROM users WHERE permission IS NULL") or die($mysqli->error());
-                if ($permission == 'admin')
-                {
-                    while ($row = $result->fetch_assoc())
-                    {
-            ?>
-            <tr>
-                <td>
-                    <?php echo $row['user_id']; ?>
-                </td>
-                <td>
-                    <?php echo $row['first_name']; ?>
-                </td>
-                <td>
-                    <?php echo $row['last_name']; ?>
-                </td>
-                <td>
-                    <?php echo $row['email']; ?>
-                </td>
-                <td>
-                    <?php echo '<a href="delete.php?id='.$row['user_id'].'" style="color: #56e2bd;">Delete</a>'; ?>
-                </td>
-                <br>
-            </tr>
-            <?php
-                    }
-                }
-            ?>
+                if ($permission == 'admin'){
+                    while ($row = $result->fetch_assoc()){ ?>
+                        <tr>
+                            <td><?php echo $row['user_id']; ?></td>
+                            <td><?php echo $row['first_name']; ?></td>
+                            <td><?php echo $row['last_name']; ?></td>
+                            <td><?php echo $row['email']; ?></td>
+                            <td><?php echo '<a href="delete.php?id='.$row['user_id'].'" style="color: #56e2bd;">Delete</a>'; ?></td>
+                            <br>
+                        </tr>
+            <?php }
+                } ?>
         </table>
         <a href="logout.php"><button class="button button-block" name="logout"/>Log Out</button></a>
         <a href="http://localhost/MovieRental/login/"><button class="button button-block"/>Home</button></a>

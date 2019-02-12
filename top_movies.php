@@ -7,12 +7,14 @@ $stmt = $conn->prepare("SELECT title, age_restriction, duration FROM info WHERE 
 $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+
+if(!empty($results)){
 ?>
 <section id="top_movies" class="clearfix">
     <div class="wrapper">
         <header class="clearfix">
             <h2>Latest Movies</h2>
-            <p class="view_more">View All Movies</p>
+            <a href="#"><p class="view_more">View All Movies</p></a>
         </header>
         <div class="row">
             <?php
@@ -31,3 +33,4 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </div>
 </section>
+<?php } ?>

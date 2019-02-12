@@ -77,7 +77,7 @@
                 <span id="update_message"></span>
                 <button type="submit" class="button button-block" name="update" id="update"/>Update Profile</button>
             </form>
-            <a href="http://localhost/MovieRental/login//"><button class="button button-block"/>Home</button></a>
+            <a href="http://localhost/MovieRental/login/"><button class="button button-block"/>Home</button></a>
         </div>
     </div>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>

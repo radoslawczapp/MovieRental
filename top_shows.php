@@ -1,25 +1,34 @@
-<?php include_once('array.php');
+<?php
+include_once('array.php');
 
- ?>
-<section id="top_shows" class="clearfix">
+include_once('db.php');
+
+$stmt = $conn->prepare("SELECT title, age_restriction, duration FROM info WHERE kind = 'tv'");
+$stmt->execute();
+$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+if(!empty($results)){
+?>
+<section id="top_movies" class="clearfix">
     <div class="wrapper">
         <header class="clearfix">
             <h2>Latest TV Shows</h2>
-            <p class="view_more">View All TV Shows</p>
+            <a href="#"><p class="view_more">View All TV Shows</p></a>
         </header>
         <div class="row">
             <?php
-            for ($i=1; $i <= 6; $i++) {
-                $cover = 'images/movies/'. $table[$i]['cover'];
+            for ($i=count($results)-1; $i > count($results) - 7; --$i) {
+                $cover = 'images/tv_shows/cover_'.str_replace('.', '', str_replace(':','', strtolower(str_replace(' ', '_', $results[$i]['title'])))).'.jpg';
                 ?>
             <div class="post">
-                <img src="<?php echo $cover; ?>" alt="<?php echo $table[$i]['title'] ?>">
-                <h3 class="title"><?php echo $table[$i]['title']; ?></h3>
+                <img src="<?php echo $cover; ?>" alt="<?php echo $results[$i]['title'] ?>">
+                <h3 class="title"><?php echo $results[$i]['title']; ?></h3>
                 <div class="post_info">
-                    <?php echo $table[$i]['age_restriction'].' | '. $table[$i]['duration'].' min'; ?>
+                    <?php echo 'PG'.$results[$i]['age_restriction'].' | '. $results[$i]['duration'].' min'; ?>
                 </div>
             </div>
             <?php } ?>
         </div>
     </div>
 </section>
+<?php } ?>
