@@ -95,21 +95,22 @@ h1, h2, h3, h4, h5, h6 {
       transition: .4s; }
     #banner #poster .play_button {
       position: absolute;
-      width: 80px;
+      width: 50%;
       left: 50%;
       top: 50%;
-      margin: -40px 0 0 -40px;
+      margin: -65px 0 0 -65px;
       -webkit-transition: .5s;
       -o-transition: .5s;
-      transition: .5s; }
+      transition: .5s;
+      opacity: .5; }
     #banner #poster .play_button:hover {
-      -webkit-transform: scale(1.3) rotate(360deg);
-      -moz-transform: scale(1.3) rotate(360deg);
-      -ms-transform: scale(1.3) rotate(360deg);
-      transform: scale(1.3) rotate(360deg);
-      -webkit-transition: .4s;
-      -o-transition: .4s;
-      transition: .4s;
+      -webkit-transform: scale(1.5);
+      -moz-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+      transform: scale(1.5);
+      -webkit-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s;
       cursor: pointer; }
   #banner #content {
     float: left;
@@ -140,6 +141,30 @@ h1, h2, h3, h4, h5, h6 {
       margin-top: 3em; }
       #banner #content .info span {
         margin: 0 .5em; }
+
+.rent {
+  margin-top: 4rem;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
+  .rent .button {
+    padding: 0.5em 1.5em;
+    text-align: center;
+    text-decoration: none;
+    color: #1ab188;
+    border: 1px solid #1ab188;
+    font-size: 1.25rem;
+    font-weight: 400;
+    border-radius: .9rem;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
+  .rent .button:hover {
+    background-color: #1ab188;
+    color: #fff;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
 
 #top_movies, #top_shows {
   padding: 5em 0; }

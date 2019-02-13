@@ -11,27 +11,20 @@
 
     $result = $mysqli->query("SELECT * FROM users WHERE email='$email'") or die($mysqli->error());
 
-    if ($result->num_rows > 0)
-    {
+    if ($result->num_rows > 0){
         $_SESSION['message'] = '<div class="info-alert">User with this email already exists!</div>';
         header("location: error.php");
-    }
-    else
-    {
-        $sql = "INSERT INTO users (first_name, last_name, email, password, hash)"
-            ."VALUES ('$first_name','$last_name','$email','$password', '$hash')";
+    } else{
+        $sql = "INSERT INTO users (first_name, last_name, email, password, hash)"."VALUES ('$first_name','$last_name','$email','$password', '$hash')";
 
-        if ($mysqli->query($sql))
-        {
+        if ($mysqli->query($sql)){
             $result = $mysqli->query("SELECT * FROM users WHERE email='$email'");
             $user = $result->fetch_assoc();
 
             $id = $user['user_id'];
 
             $_SESSION['logged_in'] = true;
-        }
-        else
-        {
+        } else{
             $_SESSION['message'] = '<div class="info-alert">Registration failed!</div>';
             header("location: error.php");
         }

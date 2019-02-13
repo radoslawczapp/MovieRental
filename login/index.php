@@ -2,24 +2,13 @@
     require 'db.php';
     session_start();
 
-    if (isset($_SESSION['logged_in']) == 1)
-    {
+    if (isset($_SESSION['logged_in']) == 1){
         header("location: profile.php");
     }
 
-    if (isset($_COOKIE['email']))
-    {
-        $_SESSION['email'] = $_COOKIE['email'];
-        $_SESSION['logged_in'] = 1;
-        header("location: profile.php");
-    }
-
-    if (isset($_POST['login']) && $_POST['email'] != "" && $_POST['password'] != "")
-    {
+    if (isset($_POST['login']) && $_POST['email'] != "" && $_POST['password'] != ""){
         require 'login.php';
-    }
-    elseif (isset($_POST['register']) && $_POST['firstname'] != "" && $_POST['lastname'] != "" && $_POST['remail'] != "" && $_POST['rpassword'] != "")
-    {
+    } elseif (isset($_POST['register']) && $_POST['firstname'] != "" && $_POST['lastname'] != "" && $_POST['remail'] != "" && $_POST['rpassword'] != ""){
         require 'register.php';
     }
 ?>
@@ -57,7 +46,6 @@
                         <input type="password" autocomplete="off" name="password" id="password"/>
                     </div>
                     <a class="showpass" onclick="toggle_password('password');" id="showpass" style="color: #1ab188; margin-left: 10px; cursor: pointer;">Show Password</a>
-                    <!-- <p class="forgot"><a href="forgot.php">Forgot Password?</p></a> -->
                     <span id="login_message"></span>
                     <button class="button button-block" name="login" id="login"/>Log In</button>
                 </form>

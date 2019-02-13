@@ -2,13 +2,10 @@
     require 'db.php';
     session_start();
 
-    if ($_SESSION['logged_in'] != 1)
-    {
+    if ($_SESSION['logged_in'] != 1){
         $_SESSION['message'] = "<div class='info-alert'>You must log in before viewing your profile page!</div>";
         header("location: error.php");
-    }
-    else
-    {
+    } else{
         $email = $mysqli->escape_string($_SESSION['email']);
         $result = $mysqli->query("SELECT * FROM users WHERE email='$email'");
         $user = $result->fetch_assoc();
