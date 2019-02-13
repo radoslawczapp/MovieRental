@@ -3,7 +3,7 @@ $banner = isset($_GET['title']) ? $_GET['title'] : '';
 echo $banner;
  ?>
 
-<section id="banner" class="clearfix" style="background: url(images/posters/deadpool_poster.png);background-size: cover;">
+<section id="banner" class="clearfix" style="background: url(images/posters/poster_deadpool.png);background-size: cover;">
     <div id="banner_content_wrapper">
             <video id="video" controls>
                 <source src="video/deadpool.mp4" type="video/mp4">

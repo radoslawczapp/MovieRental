@@ -1,5 +1,6 @@
 <?php
 include_once('db.php');
+include_once('header.php');
 
 $stmt = $conn->prepare("SELECT title, age_restriction, duration FROM info WHERE kind = 'movie'");
 $stmt->execute();
@@ -10,14 +11,12 @@ if(!empty($results)){
 <section id="top_movies" class="clearfix">
     <div class="wrapper">
         <header class="clearfix">
-            <h2>Latest Movies</h2>
-            <a href="movies.php"><p class="view_more">View All Movies</p></a>
+            <h2>All Movies</h2>
         </header>
         <div class="row">
             <?php
-            for ($i=count($results)-1; $i > count($results) - 7; --$i) {
+            for ($i=count($results)-1; $i >= 0; --$i) {
                 $cover = 'images/movies/cover_'.str_replace('.', '', str_replace(':','', strtolower(str_replace(' ', '_', $results[$i]['title'])))).'.jpg';
-
                 ?>
             <div class="post">
                 <img src="<?php echo $cover; ?>" alt="<?php echo $results[$i]['title'] ?>">
@@ -30,4 +29,7 @@ if(!empty($results)){
         </div>
     </div>
 </section>
-<?php } ?>
+<?php }
+
+include_once('footer.php');
+?>

@@ -28,7 +28,8 @@ h1, h2, h3, h4, h5, h6 {
 
 #top_header {
   padding: 1.5rem 0;
-  background: #ffffff; }
+  background: #ffffff;
+  border-bottom: 1px solid #d4d4d4; }
   #top_header .logo {
     float: left;
     text-transform: uppercase;
@@ -182,9 +183,9 @@ h1, h2, h3, h4, h5, h6 {
       -webkit-transition: .4s;
       -o-transition: .4s;
       transition: .4s;
-      -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
-      box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75); }
+      -webkit-box-shadow: 0px 0px 30px 0px black;
+      -moz-box-shadow: 0px 0px 30px 0px black;
+      box-shadow: 0px 0px 30px 0px black; }
     .row .post .title {
       font-size: 1.25em;
       margin: 1em 0 0 0;
@@ -193,10 +194,6 @@ h1, h2, h3, h4, h5, h6 {
       font-size: .75em;
       color: #24313c;
       margin: 0.5em 0; }
-    .row .post h3:hover {
-      text-decoration: underline;
-      cursor: pointer;
-      color: #1ab188; }
 
 #newsletter {
   padding: 5em 0;

@@ -60,8 +60,8 @@
                     <!-- <p class="forgot"><a href="forgot.php">Forgot Password?</p></a> -->
                     <span id="login_message"></span>
                     <button class="button button-block" name="login" id="login"/>Log In</button>
-                    <a class="button button-block" href="../index.php" style="text-align: center;"/>Home Page</a>
                 </form>
+                <a href="../index.php"><button name="home" class="button button-block">Home Page</button></a>
             </div>
             <div id="signup">
                 <h1>Sign Up for Free</h1>
@@ -94,8 +94,8 @@
                     </div>
                     <span id="signup_message"></span>
                     <button type="submit" class="button button-block" name="register" id="register"/>Register</button>
-                    <a class="button button-block" href="../index.php" style="text-align: center;"/>Home Page</a>
                 </form>
+                <a href="../index.php"><button name="home" class="button button-block">Home Page</button></a>
             </div>
         </div>
     </div>

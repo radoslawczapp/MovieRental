@@ -40,6 +40,7 @@ h1, h2, h3, h4, h5, h6{
     padding: 1.5rem 0;
     // background: #d4d4d4;
     background: $white;
+    border-bottom: 1px solid #d4d4d4;
     .logo{
         float: left;
         text-transform: uppercase;
@@ -218,9 +219,9 @@ h1, h2, h3, h4, h5, h6{
             cursor: pointer;
             transform: scale(1.1);
             transition: .4s;
-            -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
-            -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
-            box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,1);
+            -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,1);
+            box-shadow: 0px 0px 30px 0px rgba(0,0,0,1);
         }
         .title{
             font-size: 1.25em;
@@ -231,11 +232,6 @@ h1, h2, h3, h4, h5, h6{
             font-size: .75em;
             color: $secondary;
             margin: 0.5em 0;
-        }
-        h3:hover{
-            text-decoration: underline;
-            cursor: pointer;
-            color: $highlight;
         }
     }
 }

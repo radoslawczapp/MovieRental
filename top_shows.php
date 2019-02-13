@@ -1,6 +1,4 @@
 <?php
-include_once('array.php');
-
 include_once('db.php');
 
 $stmt = $conn->prepare("SELECT title, age_restriction, duration FROM info WHERE kind = 'tv'");
@@ -13,7 +11,7 @@ if(!empty($results)){
     <div class="wrapper">
         <header class="clearfix">
             <h2>Latest TV Shows</h2>
-            <a href="#"><p class="view_more">View All TV Shows</p></a>
+            <a href="tvshows.php"><p class="view_more">View All TV Shows</p></a>
         </header>
         <div class="row">
             <?php
