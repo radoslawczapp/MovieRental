@@ -21,6 +21,13 @@ if(isset($_GET['id'])){
     $date       = $results[0]['date'];
     $price      = $results[0]['price'];
 
+    $email = $_SESSION['email'];
+    $state = $conn->prepare("SELECT account FROM users WHERE email = '$email'");
+    $state->execute();
+    $result = $state->fetchAll(PDO::FETCH_ASSOC);
+    $account    = $result[0]['account'];
+
+    $_SESSION['account'] = $account;
     $sth = $conn->prepare("SELECT category_name FROM categories WHERE category_id = $category");
     $sth->execute();
     $categories = $sth->fetchAll(PDO::FETCH_ASSOC);

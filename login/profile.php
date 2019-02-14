@@ -15,6 +15,9 @@
         $email          = $user['email'];
         $permission     = $user['permission'];
         $account        = $user['account'];
+        $user_id        = $user['user_id'];
+
+        
     }
 ?>
 
@@ -32,11 +35,11 @@
         <h2><?= $first_name.' '.$last_name ?></h2>
         <p><?= $email ?></p>
         <?php if($permission == NULL){
-            if($account-$_SESSION['total'] >= 0){
+            if($account >= 0){
             ?>
-            <h2 style="color:#faed27;">Account balance:<span style="color: green;"> $<?= $account-$_SESSION['total'] ?></span></h2><br />
+            <h2 style="color:#faed27;">Account balance:<span style="color: green;"> $<?= $account ?></span></h2><br />
         <?php } else{ ?>
-            <h2 style="color:#faed27;">Account balance:<span style="color: red;"> $<?= $account-$_SESSION['total'] ?></span></h2><br />
+            <h2 style="color:#faed27;">Account balance:<span style="color: red;"> $<?= $account ?></span></h2><br />
         <?php } ?>
             <p><a href="rented.php" class="currently">Currently Rented</a></p><br />
         <?php } ?>

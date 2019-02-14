@@ -8,10 +8,13 @@
         header("location: error.php");
     } else{
         $email = $mysqli->escape_string($_SESSION['email']);
-        $result = $mysqli->query("SELECT user_id, permission FROM users WHERE email='$email'");
+        $result = $mysqli->query("SELECT user_id, permission, account FROM users WHERE email='$email'");
         $user = $result->fetch_assoc();
+
         $permission = $user['permission'];
-        $user_id = $user['user_id'];
+        $user_id    = $user['user_id'];
+
+
     }
 ?>
 
@@ -54,7 +57,8 @@
                 <td style="color:#faed27; font-size: 20px;">$
                     <?php
                     $_SESSION['total'] = array_sum($sum);
-                    echo $_SESSION['total']; ?></td>
+                    echo $_SESSION['total'];
+                    ?></td>
             </tr>
         </table>
         <a href="logout.php"><button class="button button-block" name="logout"/>Log Out</button></a>

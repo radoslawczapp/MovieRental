@@ -21,6 +21,10 @@ if($_SESSION['logged_in'] != 1){
     $stmt = $conn->prepare("INSERT INTO `rented`(`user_id`, `info_id`) VALUES ('$user_id', '$info_id')");
     $stmt->execute();
 
+    $balance = $_SESSION['account'] - $price;
+    $stmt = $conn->prepare("UPDATE users SET account = '$balance' WHERE user_id = '$user_id'");
+    $stmt->execute();
+
     header('Location: ' . $_SERVER['HTTP_REFERER']);
 }
 ?>
