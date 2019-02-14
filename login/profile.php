@@ -17,7 +17,7 @@
         $account        = $user['account'];
         $user_id        = $user['user_id'];
 
-        
+
     }
 ?>
 
@@ -51,6 +51,7 @@
             <a href="admin.php"><button class="button button-block" name="adminpage"/>Admin Page</button></a>
     <?php } ?>
 
+    <a href="deposit.php"><button name="home" class="button button-block">Deposit</button></a>
     <a href="../index.php"><button name="home" class="button button-block">Home Page</button></a>
     </div>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>

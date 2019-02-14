@@ -14,7 +14,7 @@
             $_SESSION['last_name'] = $user['last_name'];
             $_SESSION['permission'] = $user['permission'];
             $_SESSION['logged_in'] = true;
-
+            $_SESSION['account'] = $user['account'];
             header("location: ../index.php");
         }
     }
