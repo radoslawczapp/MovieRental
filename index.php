@@ -44,20 +44,18 @@ if(isset($_GET['id'])){
             <p class="description"><?php echo $review; ?></p>
             <p class="info">PG<?php echo $age; ?> <span>|</span> <?php echo $duration; ?> min <span>|</span> <?php echo $category_name; ?> <span>|</span> <?php echo date("Y F d", strtotime($date)); ?></p>
             <div class="rent">
-                <a href="#" class="button">$<?php echo $price; ?></div></a>
+                <?php if(isset($_SESSION['logged_in']) AND $_SESSION['logged_in'] == 1){ ?>
+                        <a href="rent.php?id=<?= $id ?>" class="button">$<?php echo $price; ?></div></a>
+                <?php } ?>
             </div>
         </div>
     </div>
 </section>
 <?php } else{ ?>
-
-    <style>#welcome{color:#ffffff;text-align:center;}.logowelcome{color:#ffffff;text-transform:uppercase;font-weight:700;}#amp{color:#1ab188;font-weight:300;}h4{color:#ffffff;font-weight:300;text-align:center;}</style>
     <section id="banner" class="clearfix" style="background: url(images/poster_all_movies.png);background-size: cover;">
                 <h1 id="welcome">Welcome to <span class="logowelcome">Movie</span><span id="amp">&amp;</span><span class="logowelcome">Rental</span></h1>
                 <h4>Rent your favourite Movies and TV Shows online!</h4>
     </section>
-
-
 <?php }
 
 include_once('top_movies.php');

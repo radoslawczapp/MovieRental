@@ -27,13 +27,19 @@ require 'login/db.php';
             <nav id="main_nav">
                 <a href="movies.php">Movies</a>
                 <a href="tvshows.php">TV Shows</a>
-                <a href="#">Celebs &amp; Photos</a>
+                <!-- <a href="#">Celebs &amp; Photos</a> -->
                 <a href="http://localhost/MovieRental/login/">
                 <?php
                 if(isset($_SESSION['logged_in']) AND $_SESSION['logged_in'] == 1){
-                    echo "Profile";
+                    echo "My Profile";
                 } else{
                     echo "Login/Sign Up";
+                } ?>
+                </a>
+                <a href="http://localhost/MovieRental/login/rented.php">
+                <?php
+                if(isset($_SESSION['logged_in']) AND $_SESSION['logged_in'] == 1 AND $_SESSION['permission'] == NULL){
+                    echo "Currently Rented";
                 } ?>
                 </a>
             </nav>

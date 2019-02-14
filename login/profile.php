@@ -10,10 +10,11 @@
         $result = $mysqli->query("SELECT * FROM users WHERE email='$email'");
         $user = $result->fetch_assoc();
 
-        $first_name = $user['first_name'];
-        $last_name = $user['last_name'];
-        $email = $user['email'];
-        $permission = $user['permission'];
+        $first_name     = $user['first_name'];
+        $last_name      = $user['last_name'];
+        $email          = $user['email'];
+        $permission     = $user['permission'];
+        $account        = $user['account'];
     }
 ?>
 
@@ -28,8 +29,17 @@
 <body>
     <div class="form">
         <h1>Welcome</h1>
-        <h2><?php echo $first_name.' '.$last_name; ?></h2>
+        <h2><?= $first_name.' '.$last_name ?></h2>
         <p><?= $email ?></p>
+        <?php if($permission == NULL){
+            if($account-$_SESSION['total'] >= 0){
+            ?>
+            <h2 style="color:#faed27;">Account balance:<span style="color: green;"> $<?= $account-$_SESSION['total'] ?></span></h2><br />
+        <?php } else{ ?>
+            <h2 style="color:#faed27;">Account balance:<span style="color: red;"> $<?= $account-$_SESSION['total'] ?></span></h2><br />
+        <?php } ?>
+            <p><a href="rented.php" class="currently">Currently Rented</a></p><br />
+        <?php } ?>
         <a href="logout.php"><button class="button button-block" name="logout"/>Log Out</button></a>
         <a href="update.php"><button class="button button-block" name="update"/>Update Profile</button></a>
         <a href="changepassword.php"><button class="button button-block" name="changepassword"/>Change Password</button></a>
