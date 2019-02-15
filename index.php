@@ -2,9 +2,33 @@
 include_once('db.php');
 include_once('header.php');
 
+if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 1){
+    $email = $_SESSION['email'];
+
+    $state = $conn->prepare("SELECT account, user_id FROM users WHERE email = '$email'");
+    $state->execute();
+    $result = $state->fetchAll(PDO::FETCH_ASSOC);
+
+    $account = $result[0]['account'];
+    $user_id = $result[0]['user_id'];
+
+    $_SESSION['account'] = $account;
+
+    $st = $conn->prepare("SELECT * FROM rented WHERE user_id = '$user_id'");
+    $st->execute();
+    // $rents = $st->fetchAll(PDO::FETCH_ASSOC);
+
+    $rents = array();
+    foreach ($st->fetchAll() as $key => $value) {
+        array_push($rents, $value['info_id']);
+    }
+}
 if(isset($_GET['id'])){
-    // Display movie info
     $id = $_GET['id'];
+
+
+    // Display movie info
+
     $stmt = $conn->prepare("SELECT * FROM info WHERE id = $id");
     $stmt->execute();
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -21,17 +45,12 @@ if(isset($_GET['id'])){
     $date       = $results[0]['date'];
     $price      = $results[0]['price'];
 
-    $email = $_SESSION['email'];
-    $state = $conn->prepare("SELECT account FROM users WHERE email = '$email'");
-    $state->execute();
-    $result = $state->fetchAll(PDO::FETCH_ASSOC);
-    $account    = $result[0]['account'];
-
-    $_SESSION['account'] = $account;
     $sth = $conn->prepare("SELECT category_name FROM categories WHERE category_id = $category");
     $sth->execute();
     $categories = $sth->fetchAll(PDO::FETCH_ASSOC);
+
     $category_name = ucfirst($categories[0]['category_name']);
+
 ?>
 <section id="banner" class="clearfix" style="background: url(<?php echo $poster; ?>);background-size: cover;">
     <div id="banner_content_wrapper">
@@ -51,9 +70,13 @@ if(isset($_GET['id'])){
             <p class="description"><?php echo $review; ?></p>
             <p class="info">PG<?php echo $age; ?> <span>|</span> <?php echo $duration; ?> min <span>|</span> <?php echo $category_name; ?> <span>|</span> <?php echo date("Y F d", strtotime($date)); ?></p>
             <div class="rent">
-                <?php if(isset($_SESSION['logged_in']) AND $_SESSION['logged_in'] == 1){ ?>
-                        <a href="rent.php?id=<?= $id ?>" class="button">$<?php echo $price; ?></div></a>
-                <?php } ?>
+                <?php if(isset($_SESSION['logged_in']) AND $_SESSION['logged_in'] == 1){
+                        if (!in_array($id, $rents)){ ?>
+                            <a href="rent.php?id=<?= $id ?>" class="button">$<?php echo $price; ?></div></a>
+                    <?php } else{ ?>
+                        <a href="#" class="button" style="background: #1ab188; color: #ffffff; cursor: not-allowed;">Rented</div></a>
+                <?php    }
+                     } ?>
             </div>
         </div>
     </div>
@@ -61,7 +84,7 @@ if(isset($_GET['id'])){
 <?php } else{ ?>
     <section id="banner" class="clearfix" style="background: url(images/poster_all_movies.png);background-size: cover;">
                 <h1 id="welcome">Welcome to <span class="logowelcome">Movie</span><span id="amp">&amp;</span><span class="logowelcome">Rental</span></h1>
-                <h4>Rent your favourite Movies and TV Shows online!</h4>
+                <h4>Rent and watch your favourite Movies and TV Shows online!</h4>
     </section>
 <?php }
 

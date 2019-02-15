@@ -13,8 +13,6 @@
 
         $permission = $user['permission'];
         $user_id    = $user['user_id'];
-
-
     }
 ?>
 
@@ -33,7 +31,7 @@
             <th style="border-bottom: 2px solid #bcbcbc;">#</th>
             <th style="border-bottom: 2px solid #bcbcbc;">Title</th>
             <th style="border-bottom: 2px solid #bcbcbc;">Price</th>
-            <th style="border-bottom: 2px solid #bcbcbc;">Delete</th>
+            <th colspan="2" style="border-bottom: 2px solid #bcbcbc;">Action</th>
             <?php
             $stmt = $mysqli->query("SELECT info_id FROM rented WHERE user_id = $user_id");
             $sum = array();
@@ -49,6 +47,7 @@
                             array_push($sum, $info['price']);;
                          ?></td>
                          <td><?php echo '<a href="delete_rent.php?id='.$id.'" style="color: #56e2bd;">Delete</a>'; ?></td>
+                         <td><?php echo '<a href="watch.php?id='.$id.'" style="color: #56e2bd;">Watch</a>'; ?></td>
                     </tr>
             <?php } ?>
             <tr>

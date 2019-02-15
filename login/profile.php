@@ -34,7 +34,7 @@
         <h1>Welcome</h1>
         <h2><?= $first_name.' '.$last_name ?></h2>
         <p><?= $email ?></p>
-        <?php if($permission == NULL){
+        <?php 
             if($account >= 0){
             ?>
             <h2 style="color:#faed27;">Account balance:<span style="color: green;"> $<?= $account ?></span></h2><br />
@@ -42,7 +42,7 @@
             <h2 style="color:#faed27;">Account balance:<span style="color: red;"> $<?= $account ?></span></h2><br />
         <?php } ?>
             <p><a href="rented.php" class="currently">Currently Rented</a></p><br />
-        <?php } ?>
+
         <a href="logout.php"><button class="button button-block" name="logout"/>Log Out</button></a>
         <a href="update.php"><button class="button button-block" name="update"/>Update Profile</button></a>
         <a href="changepassword.php"><button class="button button-block" name="changepassword"/>Change Password</button></a>
